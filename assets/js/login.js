@@ -47,7 +47,7 @@ $(function() {
     })
 
     // 监听登录表单提交事件
-    $('#form_login').on('submit', function(e) {
+    $('#form_login').submit(function(e) {
         // 阻止表单默认提交行为
         e.preventDefault();
         $.ajax({
@@ -65,7 +65,7 @@ $(function() {
                 // 将登录成功得到的token字符串  保存到localStorage中
                 localStorage.setItem('token', res.token);
                 // 跳转到后台主页
-                location.href = '/index.html';
+                location.href = '/dashijian/index.html';
             }
         })
     })
